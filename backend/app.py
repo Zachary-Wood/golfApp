@@ -4,7 +4,9 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
 from extensions import db  
-from routes.hole_routes import hole_routes
+from routes.hole_routes import hole_bp
+
+
 
 
 app = Flask(__name__)
@@ -22,7 +24,7 @@ from models.course import Course
 from models.hole import Hole
 
 
-app.register_blueprint(hole_routes)
+app.register_blueprint(hole_bp)
 
 
 with app.app_context():
