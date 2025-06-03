@@ -21,5 +21,16 @@ class Hole(db.Model):
 
     course_id = db.Column(db.Integer, db.ForeignKey('courses.id'), nullable=False)
 
-    def __repr__(self):
-        return f"<Hole {self.number} - {self.yardage} yds, Par {self.par}>"
+def to_dict(self):
+    return {
+        "id": self.id,
+        "number": self.number,
+        "par": self.par,
+        "yardage": self.yardage,
+        "handicap": self.handicap,
+        "image_url": self.image_url,
+        "tee": {"lat": self.tee_lat, "lon": self.tee_lon},
+        "green": {"lat": self.green_lat, "lon": self.green_lon},
+        "type": self.type,
+        "notes": self.notes
+    }
