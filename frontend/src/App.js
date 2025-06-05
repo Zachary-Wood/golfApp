@@ -4,7 +4,7 @@ import HoleViewer from './components/HoleViewer.jsx';
 function App() {
   return (
     <div className="App">
-      <HoleViewer holeId={1} />
+      <HoleViewer/>
     </div>
   );
 }
