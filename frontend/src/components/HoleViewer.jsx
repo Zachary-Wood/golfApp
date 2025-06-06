@@ -4,7 +4,7 @@ import axios from 'axios';
 const HoleViewer = () => {
   const [hole, setHole] = useState(null);
   const [loading, setLoading] = useState(true);
-
+  // we used axios for HTTP requests
   useEffect(() => {
     const fetchHoleData = async () => {
       try {
